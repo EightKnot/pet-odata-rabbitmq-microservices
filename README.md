@@ -1,7 +1,7 @@
 # pet-odata-rabbitmq-microservices
 
 Here is a training project to get prepared to start on ECA project:
--Create Order mS
+#-Create Order mS
   -REST Endpoints for Order and Order Details, Spring web
   -Spring Boot, Spring Data, Hibernate
   -Postgres DB
