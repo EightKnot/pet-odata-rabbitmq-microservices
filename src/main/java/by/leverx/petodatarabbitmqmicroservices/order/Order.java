@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Setter
 @Getter
 @RequiredArgsConstructor
-@Table(name = "orders")
+@Table(name = "orders", schema = "public")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Order {
     @Id
