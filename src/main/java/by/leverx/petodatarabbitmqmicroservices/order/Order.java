@@ -9,6 +9,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Setter
@@ -22,7 +23,7 @@ public class Order {
     private Long id;
     private String client;
     private String supplier;
-    private LocalDate date;
+    private Date date;
     @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "order_details_id")
     private OrderDetails orderDetails;

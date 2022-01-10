@@ -1,5 +1,6 @@
 package by.leverx.petodatarabbitmqmicroservices.order;
 
+import by.leverx.petodatarabbitmqmicroservices.rabbitmqProducer.RabbitMQSender;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,9 +12,13 @@ import java.util.List;
 public class OrderController {
     private final OrderService orderService;
 
+    private final RabbitMQSender rabbitMQSender;
+
     @PostMapping(path = "/order")
     public Order createOrder(@RequestBody Order order) {
-        return orderService.createOrder(order);
+        Order orderCurrent = orderService.createOrder(order);
+        rabbitMQSender.send(orderCurrent);
+        return orderCurrent;
     }
 
     @GetMapping(path = "/")
