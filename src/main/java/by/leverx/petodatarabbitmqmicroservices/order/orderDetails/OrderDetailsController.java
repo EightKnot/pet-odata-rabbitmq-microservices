@@ -1,4 +1,4 @@
-package by.leverx.petodatarabbitmqmicroservices.orderDetails;
+package by.leverx.petodatarabbitmqmicroservices.order.orderDetails;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

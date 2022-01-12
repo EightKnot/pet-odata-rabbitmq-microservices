@@ -1,4 +1,4 @@
-package by.leverx.petodatarabbitmqmicroservices.orderDetails;
+package by.leverx.petodatarabbitmqmicroservices.order.orderDetails;
 
 import by.leverx.petodatarabbitmqmicroservices.order.Order;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

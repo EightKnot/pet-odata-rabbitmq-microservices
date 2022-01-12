@@ -1,14 +1,12 @@
 package by.leverx.petodatarabbitmqmicroservices.order;
 
-import by.leverx.petodatarabbitmqmicroservices.orderDetails.OrderDetails;
+import by.leverx.petodatarabbitmqmicroservices.order.orderDetails.OrderDetails;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.Date;
 
 @Entity

@@ -1,4 +1,4 @@
-package by.leverx.petodatarabbitmqmicroservices.orderDetails;
+package by.leverx.petodatarabbitmqmicroservices.order.orderDetails;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
