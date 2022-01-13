@@ -1,5 +1,6 @@
 package by.leverx.petodatarabbitmqmicroservices.order;
 
+import by.leverx.petodatarabbitmqmicroservices.rabbitmqProducer.RabbitMQSender;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -9,9 +10,14 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OrderService {
     private final OrderRepository orderRepository;
+    private final RabbitMQSender rabbitMQSender;
+
 
     public Order createOrder(Order order) {
-        return orderRepository.save(order);
+        Order orderCurrent = orderRepository.save(order);
+        // sending message to RabbitMQ
+        rabbitMQSender.send(orderCurrent);
+        return orderCurrent;
     }
 
     public List<Order> getAllOrders() {
